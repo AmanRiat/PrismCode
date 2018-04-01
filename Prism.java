@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author Aman
  */
 public class Prism extends Rectangle {
+	// Method to calculate volume of a rectangular prims
     public double prismVolume(double prism_height, double prism_length, double prism_width) {
 		double prism_volume =  (prism_height * prism_length * prism_width);
 		return prism_volume;
@@ -51,7 +52,13 @@ public class Prism extends Rectangle {
 				double rect_length = scan1.nextDouble();
                                 double rect_width = scan2.nextDouble();
 				
-				
+				//checks if positive value was entered
+				if (rect_length < 0) {
+					throw new IllegalArgumentException ("Invalid input");
+				}
+				if (rect_width < 0) {
+					throw new IllegalArgumentException ("Invalid input");
+				}
 				
 				// Call rectanglearea method
 				myRectangle.RectangleArea(rect_length,rect_width);
@@ -60,12 +67,37 @@ public class Prism extends Rectangle {
 		
 			}
 		
+			// Once invalid input has been entered
+			catch(Exception e){
+				System.out.println("Invalid input");
+				if(scan1.hasNextDouble()) {
+					double rect_length = scan1.nextDouble();
+					double rect_width = scan1.nextDouble();
+				}	
+		
 			// Check for valid input
 			try {
 				System.out.print("Enter the Prism Height, length, width: ");
 				double prism_height = scan3.nextDouble();
+				
+				// Make sure user enters a positive height
+				if (prism_height < 0) {
+					throw new IllegalArgumentException ("Invalid input");
+				}
+				
                                 double prism_length = scan4.nextDouble();
+				
+				// Make sure user enters a positive height
+				if (prism_length < 0) {
+					throw new IllegalArgumentException ("Invalid input");
+				}
+				
                                 double prism_width = scan5.nextDouble();
+				
+				// Make sure user enters a positive height
+				if (prism_width < 0) {
+					throw new IllegalArgumentException ("Invalid input");
+				}
 			
 			
 				// Using cylinder class print out volume and surface area
