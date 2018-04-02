@@ -18,6 +18,4 @@ public class Rectangle {
 		double Rect_Perimeter = 2 * (rect_length * rect_width);
 		System.out.println("Perimeter of rectangle: " + Rect_Perimeter);
 	}
-    String ans2 = "yes"; 
-    
 }
