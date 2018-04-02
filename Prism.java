@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package prism;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Aman
- */
 public class Prism extends Rectangle {
-	// Method to calculate volume of a rectangular prims
+	// Method to calculate volume of a rectangular prism
     public double prismVolume(double prism_height, double prism_length, double prism_width) {
 		double prism_volume =  (prism_height * prism_length * prism_width);
 		return prism_volume;
@@ -23,15 +15,16 @@ public class Prism extends Rectangle {
 		double prism_surfaceArea = 2*((prism_width*prism_length)+(prism_height*prism_length)+(prism_height*prism_width));
 		return prism_surfaceArea;
 	}
-        
+       
     public static void main(String[] args) {
+	    // Getting user input, declaring it for later use 
         Scanner scan1 = new Scanner(System.in);	
 	Scanner scan2 = new Scanner(System.in);
 	Scanner scan3 = new Scanner(System.in);	
 	Scanner scan4 = new Scanner(System.in);
         Scanner scan5 = new Scanner(System.in);
         Scanner scan6 = new Scanner(System.in);
-        
+        // ans2 was created so program runs until no is entered upon completion 
         String ans2 = "yes"; 
         do {
 		
@@ -100,12 +93,12 @@ public class Prism extends Rectangle {
 				}
 			
 			
-				// Using cylinder class print out volume and surface area
-				// Call cylinderVolume method
+				// Using prism class prints out volume and surface area
+				// Call prismVolume method
 				myPrism.prismVolume(prism_height, prism_length, prism_width);
 				System.out.println("The volume of the rectangular prism is: " + myPrism.prismVolume(prism_height, prism_length, prism_width));
 			
-				//call cylinderSurfaceArea method
+				//call prismSurfaceArea method
 				myPrism.prismSurfaceArea(prism_height, prism_length, prism_width);
 				System.out.println("The surface area of the rectangular prism is: " + myPrism.prismSurfaceArea(prism_height, prism_length, prism_width));
 			}
@@ -114,7 +107,7 @@ public class Prism extends Rectangle {
 			catch(Exception e){
 				System.out.println("Invalid input ");
 			}
-		
+		// Lines below used for multiple runs 
 			System.out.println("Would you like to try again? ");
 			ans2 = scan6.nextLine();
 				
