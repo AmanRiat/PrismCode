@@ -10,7 +10,7 @@ public class Rectangle {
 
 	// Method to calculate the perimeter of a circle, doesn't return a value, i.e void
 	public void RectanglePerimeter(double rect_length, double rect_width) {
-		double Rect_Perimeter = 2 * (rect_length * rect_width);
+		double Rect_Perimeter = 2 * (rect_length + rect_width);
 		System.out.println("Perimeter of rectangle: " + Rect_Perimeter);
 	}
 }
